@@ -12,7 +12,7 @@ module FastExcelRails
         # of the same workbook by default.
         root_view = false
         unless @fast_excel_rails_template_workbook
-          @fast_excel_rails_template_workbook = FastExcel.open
+          @fast_excel_rails_template_workbook = FastExcel.open(constant_memory: true)
           root_view = true
         end
 
